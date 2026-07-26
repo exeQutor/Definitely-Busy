@@ -3,6 +3,7 @@
 A small Electron desktop app that moves your mouse cursor to a random
 position on screen every X seconds (default: 30).
 
+![Definitely Busy](assets/logo.png)
 ## How it works
 
 - `main.js` — Electron main process. Owns the timer, picks a random point
