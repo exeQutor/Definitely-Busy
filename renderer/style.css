@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #14161a;
+  color: #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+  /* Frameless window: make the whole thing draggable by default. */
+  -webkit-app-region: drag;
+  user-select: none;
+}
+
+.container {
+  position: relative;
+  padding: 24px;
+  height: 100%;
+}
+
+/* Anything the user needs to click or type into must opt out of dragging. */
+input,
+button {
+  -webkit-app-region: no-drag;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  padding: 0;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #9a9fa6;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #2c2f36;
+  color: #e6e6e6;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 4px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #9a9fa6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  color: #9a9fa6;
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #9a9fa6;
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #2c2f36;
+  background: #1c1f26;
+  color: #e6e6e6;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #d97757;
+  color: #14161a;
+  font-weight: 600;
+}
+
+button.primary:disabled {
+  background: #5a4238;
+  color: #8a8a8a;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #2c2f36;
+  color: #e6e6e6;
+}
+
+button.secondary:disabled {
+  color: #6a6f78;
+  cursor: not-allowed;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6a6f78;
+}
+
+.dot.running {
+  background: #4caf50;
+  box-shadow: 0 0 6px #4caf50;
+}
+
+.dot.idle {
+  background: #6a6f78;
+}
+
+.countdown {
+  font-size: 12px;
+  color: #9a9fa6;
+  min-height: 16px;
+}
+
+.error {
+  font-size: 12px;
+  color: #e07856;
+  min-height: 16px;
+  margin-top: 4px;
+}

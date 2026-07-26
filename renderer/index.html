@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Definitely Busy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <button id="closeBtn" class="close-btn" title="Minimize to tray">×</button>
+
+    <div class="heading">
+      <header>
+        <h1>Definitely Busy</h1>
+        <h3>Moving. Working. Not Idle.</h3>
+      </header>
+
+      <img src="../assets/logo-image.webp" alt="" height="80">
+    </div>
+
+    <p class="subtitle">Moves your mouse to a random spot every X seconds.</p>
+
+    <div class="field">
+      <label for="interval">Interval (seconds)</label>
+      <input type="number" id="interval" min="1" value="30" />
+    </div>
+
+    <div class="buttons">
+      <button id="startBtn" class="primary">Start</button>
+      <button id="stopBtn" class="secondary" disabled>Stop</button>
+    </div>
+
+    <div class="status">
+      <span id="statusDot" class="dot idle"></span>
+      <span id="statusText">Idle</span>
+    </div>
+
+    <div class="countdown" id="countdown"></div>
+    <div class="error" id="error"></div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

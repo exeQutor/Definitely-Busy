@@ -1,0 +1,36 @@
+{
+  "name": "definitely-busy",
+  "version": "1.0.0",
+  "description": "Definitely Busy — moves your mouse cursor to a random position every X seconds",
+  "main": "main.js",
+  "author": "Randy",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "@nut-tree-fork/nut-js": "^4.2.0"
+  },
+  "build": {
+    "appId": "com.randy.definitelybusy",
+    "productName": "Definitely Busy",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "mac": { "category": "public.app-category.utilities", "icon": "build/icon.png" },
+    "win": { "target": "nsis", "icon": "build/icon.ico" },
+    "linux": { "target": "AppImage", "icon": "build/icon.png" }
+  }
+}
+
